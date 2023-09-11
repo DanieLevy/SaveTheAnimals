@@ -15,6 +15,7 @@ function buildAnimalsPDF(animals) {
       doc.image(`./imgs/${animal.id}-${idx}.jpg`, 100, 200 + idx * 100, {
         width: 200,
       })
+      doc.moveDown(1) // move down half a line
     })
     doc.addPage()
   })
